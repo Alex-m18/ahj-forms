@@ -22,8 +22,8 @@ describe('popover widget', () => {
     await page.goto(baseUrl);
     const input = await page.$('.test_button');
     input.click();
-    await page.waitForSelector('.popover[display=block]');
+    await page.waitForSelector('.popover_enabled');
     input.click();
-    await page.waitForSelector('.popover[display=none]');
+    await page.waitForSelector('.popover_disabled');
   });
 });

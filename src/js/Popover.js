@@ -24,11 +24,15 @@ export default class Popover {
   show() {
     this.popoverEl.style.display = 'block';
     this.popoverEl.hidden = false;
+    this.popoverEl.classList.remove('popover_disabled');
+    this.popoverEl.classList.add('popover_enabled');
     this.update();
   }
 
   hide() {
     this.popoverEl.style.display = 'none';
+    this.popoverEl.classList.remove('popover_enabled');
+    this.popoverEl.classList.add('popover_disabled');
     this.popoverEl.hidden = true;
   }
 
